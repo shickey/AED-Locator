@@ -36,15 +36,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Where are you?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XS4-x7-BOH">
-                                <rect key="frame" x="240" y="42" width="120" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="EDc-eT-6zy">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ing-tV-sIF">
                                 <rect key="frame" x="0.0" y="138" width="600" height="462"/>
-                            </mapView>
+                                <subviews>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="EDc-eT-6zy">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="462"/>
+                                    </mapView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="pin" translatesAutoresizingMaskIntoConstraints="NO" id="IV9-bS-IKm">
+                                        <rect key="frame" x="280" y="168" width="40" height="64"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="IV9-bS-IKm" firstAttribute="centerY" secondItem="ing-tV-sIF" secondAttribute="centerY" id="4dF-mr-ezf"/>
+                                    <constraint firstItem="EDc-eT-6zy" firstAttribute="leading" secondItem="ing-tV-sIF" secondAttribute="leading" id="IRi-aV-AaR"/>
+                                    <constraint firstItem="EDc-eT-6zy" firstAttribute="top" secondItem="ing-tV-sIF" secondAttribute="top" id="NpB-6b-TV1"/>
+                                    <constraint firstAttribute="bottom" secondItem="EDc-eT-6zy" secondAttribute="bottom" id="Va7-fa-ESK"/>
+                                    <constraint firstAttribute="trailing" secondItem="EDc-eT-6zy" secondAttribute="trailing" id="ahc-hY-tGi"/>
+                                    <constraint firstItem="IV9-bS-IKm" firstAttribute="centerX" secondItem="ing-tV-sIF" secondAttribute="centerX" id="pvo-77-Fbq"/>
+                                </constraints>
+                            </view>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="C7g-Ix-ph0">
                                 <rect key="frame" x="0.0" y="94" width="600" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -52,13 +63,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="EDc-eT-6zy" firstAttribute="centerX" secondItem="3gv-HV-PFW" secondAttribute="centerX" id="Pp0-ZQ-hQe"/>
+                            <constraint firstItem="auS-yb-BdF" firstAttribute="top" secondItem="ing-tV-sIF" secondAttribute="bottom" id="DvH-tQ-Bdl"/>
                             <constraint firstAttribute="trailingMargin" secondItem="C7g-Ix-ph0" secondAttribute="trailing" constant="-20" id="VBz-OK-t2d"/>
-                            <constraint firstItem="EDc-eT-6zy" firstAttribute="leading" secondItem="3gv-HV-PFW" secondAttribute="leadingMargin" constant="-20" id="ajg-Zk-iZH"/>
+                            <constraint firstItem="ing-tV-sIF" firstAttribute="top" secondItem="C7g-Ix-ph0" secondAttribute="bottom" id="aEc-aP-Y7B"/>
                             <constraint firstItem="C7g-Ix-ph0" firstAttribute="top" secondItem="mYw-ks-Ydk" secondAttribute="bottom" id="cXL-Rp-7MN"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="EDc-eT-6zy" secondAttribute="trailing" constant="-20" id="iR6-K6-BVz"/>
+                            <constraint firstItem="ing-tV-sIF" firstAttribute="leading" secondItem="3gv-HV-PFW" secondAttribute="leadingMargin" constant="-20" id="epS-bf-InT"/>
                             <constraint firstItem="C7g-Ix-ph0" firstAttribute="leading" secondItem="3gv-HV-PFW" secondAttribute="leadingMargin" constant="-20" id="kF6-uQ-aZo"/>
-                            <constraint firstItem="XS4-x7-BOH" firstAttribute="centerX" secondItem="3gv-HV-PFW" secondAttribute="centerX" id="qrT-5e-BoE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ing-tV-sIF" secondAttribute="trailing" constant="-20" id="qOa-w9-zEV"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Where is the AED?" prompt="Move the map to the exact location of the AED" id="7qN-ov-TTt">
@@ -187,4 +198,7 @@
             <point key="canvasLocation" x="2011" y="547"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="pin" width="80" height="128"/>
+    </resources>
 </document>

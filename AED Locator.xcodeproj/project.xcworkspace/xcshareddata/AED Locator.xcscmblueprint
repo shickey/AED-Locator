@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "E7525194DC100F445C4F5F1BA97B6E1C82B7C577",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "E7525194DC100F445C4F5F1BA97B6E1C82B7C577" : 0,
+    "67620B5EFA902936DF04070AF595B76AB0333747" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "9B3FC35B-1CF9-4AD5-8E62-E3E70157F218",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "E7525194DC100F445C4F5F1BA97B6E1C82B7C577" : "AED%20Locator\/",
+    "67620B5EFA902936DF04070AF595B76AB0333747" : "AED%20Locator\/Alamofire\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "AED Locator",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "AED Locator.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Alamofire\/Alamofire.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "67620B5EFA902936DF04070AF595B76AB0333747"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/shickey\/AED-Locator.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E7525194DC100F445C4F5F1BA97B6E1C82B7C577"
+    }
+  ]
+}

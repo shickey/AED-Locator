@@ -9,6 +9,10 @@
 import Foundation
 import CoreLocation
 
+struct Notifications {
+    static let LocationDidUpdate = "AEDLocationDidUpdateNotification"
+}
+
 struct AppConstants {
     
     struct Networking {

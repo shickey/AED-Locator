@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class HomeScreenVC: UIViewController, CLLocationManagerDelegate {
+class HomeScreenVC: UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!
     
@@ -19,7 +19,11 @@ class HomeScreenVC: UIViewController, CLLocationManagerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        locationManager.delegate = self
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "locationUpdated", name: Notifications.LocationDidUpdate, object: nil)
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -31,32 +35,19 @@ class HomeScreenVC: UIViewController, CLLocationManagerDelegate {
             mapView.addAnnotation(pin)
         }
         
-        if CLLocationManager.authorizationStatus() == .NotDetermined {
-            locationManager.requestAlwaysAuthorization()
-        }
-        
     }
     
-    func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
-        if status == .AuthorizedAlways || status == .AuthorizedWhenInUse {
-            manager.startUpdatingLocation()
-        }
-        
-        // TODO : Handle when not authorized
-    }
-    
-    func locationManager(manager: CLLocationManager, didUpdateToLocation newLocation: CLLocation, fromLocation oldLocation: CLLocation) {
+    func locationUpdated() {
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let newLocation = appDelegate.currentLocation
         
         if !foundLocation {
             let span = MKCoordinateSpanMake(0.25, 0.25)
-            let region = MKCoordinateRegionMake(newLocation.coordinate, span)
+            let region = MKCoordinateRegionMake(newLocation!.coordinate, span)
             mapView.setRegion(region, animated: true)
             foundLocation = true
         }
-        
-        
     }
-
 
 }
 
