@@ -149,8 +149,8 @@
 		A32FD8861C8C4BCD00C6F73A /* AddAedVCs */ = {
 			isa = PBXGroup;
 			children = (
-				A3B378F91C8BDD8E00B17AB1 /* AddAedPhotoVC.swift */,
 				A3B378F71C8BDD4600B17AB1 /* AddAedLocateVC.swift */,
+				A3B378F91C8BDD8E00B17AB1 /* AddAedPhotoVC.swift */,
 			);
 			name = AddAedVCs;
 			sourceTree = "<group>";

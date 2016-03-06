@@ -82,6 +82,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="mapView" destination="EDc-eT-6zy" id="o0h-Kw-XsT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tfB-7H-2jR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -96,39 +99,50 @@
                         <viewControllerLayoutGuide type="bottom" id="jB2-Zm-upn"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="BQz-to-OiN">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="1000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="800"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rgf-g9-HEu">
-                                <rect key="frame" x="284" y="950" width="33" height="30"/>
-                                <state key="normal" title="Take"/>
+                                <rect key="frame" x="262" y="703" width="77" height="30"/>
+                                <state key="normal" title="Take Photo"/>
                                 <connections>
                                     <action selector="takePhotoTapped:" destination="VwK-uN-nho" eventType="touchUpInside" id="jhQ-D9-UQT"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dKI-B6-tzk">
-                                <rect key="frame" x="62" y="102" width="476" height="476"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dKI-B6-tzk">
+                                <rect key="frame" x="0.0" y="94" width="601" height="601"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="red_square" translatesAutoresizingMaskIntoConstraints="NO" id="Rkl-Kk-bik">
+                                        <rect key="frame" x="225" y="226" width="150" height="150"/>
+                                    </imageView>
+                                </subviews>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="Rkl-Kk-bik" firstAttribute="centerX" secondItem="dKI-B6-tzk" secondAttribute="centerX" id="IIl-fW-JzP"/>
                                     <constraint firstAttribute="width" secondItem="dKI-B6-tzk" secondAttribute="height" multiplier="1:1" id="vvt-HE-NHB"/>
+                                    <constraint firstItem="Rkl-Kk-bik" firstAttribute="centerY" secondItem="dKI-B6-tzk" secondAttribute="centerY" id="wo0-PF-ap1"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="toW-Aq-hlc">
-                                <rect key="frame" x="180" y="586" width="240" height="240"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="I9i-vj-X8T">
+                                <rect key="frame" x="0.0" y="94" width="601" height="601"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="I9i-vj-X8T" secondAttribute="height" multiplier="1:1" id="nvd-nC-xdL"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Rgf-g9-HEu" firstAttribute="centerX" secondItem="BQz-to-OiN" secondAttribute="centerX" id="4dp-Ju-VJ1"/>
-                            <constraint firstItem="toW-Aq-hlc" firstAttribute="top" secondItem="dKI-B6-tzk" secondAttribute="bottom" constant="37" id="6Wd-l0-jTf"/>
-                            <constraint firstItem="dKI-B6-tzk" firstAttribute="leading" secondItem="BQz-to-OiN" secondAttribute="leadingMargin" constant="42" id="9kB-zQ-LNk"/>
-                            <constraint firstItem="jB2-Zm-upn" firstAttribute="top" secondItem="Rgf-g9-HEu" secondAttribute="bottom" constant="20" id="EXv-Xc-Tuz"/>
-                            <constraint firstItem="dKI-B6-tzk" firstAttribute="centerX" secondItem="BQz-to-OiN" secondAttribute="centerX" id="Fwv-Zm-6gY"/>
-                            <constraint firstItem="toW-Aq-hlc" firstAttribute="centerX" secondItem="BQz-to-OiN" secondAttribute="centerX" id="Mx5-Nf-ngw"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="dKI-B6-tzk" secondAttribute="trailing" constant="42" id="XK0-Nc-zbc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="I9i-vj-X8T" secondAttribute="trailing" constant="-21" id="8rW-AD-CBN"/>
+                            <constraint firstItem="dKI-B6-tzk" firstAttribute="leading" secondItem="BQz-to-OiN" secondAttribute="leadingMargin" constant="-20" id="PgI-47-qwd"/>
+                            <constraint firstItem="I9i-vj-X8T" firstAttribute="leading" secondItem="BQz-to-OiN" secondAttribute="leadingMargin" constant="-20" id="Prb-HO-YZX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dKI-B6-tzk" secondAttribute="trailing" constant="-21" id="cPI-Is-5sd"/>
+                            <constraint firstItem="dKI-B6-tzk" firstAttribute="top" secondItem="mgA-5z-gqd" secondAttribute="bottom" id="gwo-aw-trA"/>
+                            <constraint firstItem="I9i-vj-X8T" firstAttribute="top" secondItem="mgA-5z-gqd" secondAttribute="bottom" id="j6e-2L-zAF"/>
+                            <constraint firstItem="Rgf-g9-HEu" firstAttribute="top" secondItem="dKI-B6-tzk" secondAttribute="bottom" constant="8" id="nZa-RA-NVb"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Take a Photo" prompt="Center the AED in the white box below." id="XGf-EF-bDC">
+                    <navigationItem key="navigationItem" title="Take a Photo" prompt="Center the AED in the box" id="XGf-EF-bDC">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="MjF-Y6-SLz">
                             <connections>
                                 <segue destination="DqL-rX-Kjv" kind="show" id="rCo-rH-gIj">
@@ -138,10 +152,11 @@
                         </barButtonItem>
                     </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="600" height="1000"/>
+                    <size key="freeformSize" width="600" height="800"/>
                     <connections>
                         <outlet property="cameraView" destination="dKI-B6-tzk" id="Mnk-Nk-WLR"/>
-                        <outlet property="imageView" destination="toW-Aq-hlc" id="4J4-Wv-l62"/>
+                        <outlet property="imageView" destination="I9i-vj-X8T" id="fNk-BT-Cdi"/>
+                        <outlet property="redSquare" destination="Rkl-Kk-bik" id="1s6-by-ZyA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cRF-Yr-bYC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -157,7 +172,7 @@
                         <viewControllerLayoutGuide type="bottom" id="vdq-1F-B33"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="L7O-Y5-r5f">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="1000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="800"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vk2-nx-wsu">
@@ -200,5 +215,6 @@
     </scenes>
     <resources>
         <image name="pin" width="80" height="128"/>
+        <image name="red_square" width="200" height="200"/>
     </resources>
 </document>

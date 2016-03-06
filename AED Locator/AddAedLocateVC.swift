@@ -7,13 +7,22 @@
 //
 
 import UIKit
+import MapKit
 
 class AddAedLocateVC: UIViewController {
 
+    @IBOutlet weak var mapView: MKMapView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let location = appDelegate.currentLocation
+        let span = MKCoordinateSpanMake(0.01, 0.01)
+        let region = MKCoordinateRegionMake(location!.coordinate, span)
+        mapView.setRegion(region, animated: true)
+        mapView.showsUserLocation = true
+        
     }
 
     override func didReceiveMemoryWarning() {

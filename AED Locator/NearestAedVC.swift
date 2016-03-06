@@ -18,11 +18,8 @@ class NearestAedVC: UIViewController {
     }
     
     func locationDidUpdate() {
-        
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        
-        print("Location updated")
-        print(appDelegate.currentLocation)
+        let location = appDelegate.currentLocation
     }
     
 

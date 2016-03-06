@@ -12,6 +12,8 @@ import AVFoundation
 class AddAedPhotoVC: UIViewController {
 
     @IBOutlet weak var cameraView: UIView!
+    @IBOutlet weak var redSquare: UIImageView!
+    
     @IBOutlet weak var imageView: UIImageView!
     
     var stillImageOutput : AVCaptureStillImageOutput? = nil
@@ -24,6 +26,10 @@ class AddAedPhotoVC: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated);
         
+        startCamera()
+    }
+    
+    func startCamera() {
         let session = AVCaptureSession()
         session.sessionPreset = AVCaptureSessionPresetHigh
         
@@ -31,6 +37,7 @@ class AddAedPhotoVC: UIViewController {
         
         let previewLayer = AVCaptureVideoPreviewLayer(session: session)
         previewLayer.frame = viewLayer.bounds
+        previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
         viewLayer.addSublayer(previewLayer)
         
         let device = AVCaptureDevice.defaultDeviceWithMediaType(AVMediaTypeVideo)
@@ -47,6 +54,9 @@ class AddAedPhotoVC: UIViewController {
         session.addOutput(stillImageOutput)
         
         session.startRunning()
+        
+        cameraView.bringSubviewToFront(redSquare)
+        
     }
     
     @IBAction func takePhotoTapped(sender: AnyObject) {
@@ -67,7 +77,17 @@ class AddAedPhotoVC: UIViewController {
         stillImageOutput!.captureStillImageAsynchronouslyFromConnection(videoConnection!) { (sampleBuffer, error) -> Void in
             let imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(sampleBuffer)
             let image = UIImage(data: imageData)
-            self.imageView.image = image
+            print(image)
+            let cropRect = CGRectMake(0.0, 0.0, image!.size.width, image!.size.width)
+            print(cropRect)
+            let croppedCGImage = CGImageCreateWithImageInRect(image!.CGImage, cropRect)
+            print(croppedCGImage)
+            let croppedImage = UIImage(CGImage: croppedCGImage!, scale: image!.scale, orientation: image!.imageOrientation)
+            
+            print(croppedImage)
+            
+            self.imageView.image = croppedImage
+            self.imageView.alpha = 1.0
         }
         
     }
