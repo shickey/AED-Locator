@@ -7,21 +7,125 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A32FD8851C8C453000C6F73A /* NearestAedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32FD8841C8C453000C6F73A /* NearestAedVC.swift */; };
+		A32FD88C1C8C4C9C00C6F73A /* DisplayAedsTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32FD88B1C8C4C9C00C6F73A /* DisplayAedsTabBarController.swift */; };
+		A32FD88E1C8C4E7600C6F73A /* AddAed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A32FD88D1C8C4E7600C6F73A /* AddAed.storyboard */; };
 		A3B378B21C8BC14900B17AB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B378B11C8BC14900B17AB1 /* AppDelegate.swift */; };
-		A3B378B41C8BC14900B17AB1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B378B31C8BC14900B17AB1 /* ViewController.swift */; };
+		A3B378B41C8BC14900B17AB1 /* HomeScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B378B31C8BC14900B17AB1 /* HomeScreenVC.swift */; };
 		A3B378B71C8BC14900B17AB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3B378B51C8BC14900B17AB1 /* Main.storyboard */; };
 		A3B378B91C8BC14900B17AB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3B378B81C8BC14900B17AB1 /* Assets.xcassets */; };
 		A3B378BC1C8BC14900B17AB1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3B378BA1C8BC14900B17AB1 /* LaunchScreen.storyboard */; };
+		A3B378DB1C8BC30600B17AB1 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3B378CE1C8BC2D300B17AB1 /* Alamofire.framework */; };
+		A3B378DC1C8BC30600B17AB1 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A3B378CE1C8BC2D300B17AB1 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A3B378E31C8BC44A00B17AB1 /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B378E21C8BC44A00B17AB1 /* Types.swift */; };
+		A3B378E51C8BC50C00B17AB1 /* AedApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B378E41C8BC50C00B17AB1 /* AedApi.swift */; };
+		A3B378E71C8BC5B300B17AB1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3B378E61C8BC5B300B17AB1 /* CoreLocation.framework */; };
+		A3B378E91C8BCB1000B17AB1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3B378E81C8BCB1000B17AB1 /* MapKit.framework */; };
+		A3B378EB1C8BCC1A00B17AB1 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3B378EA1C8BCC1A00B17AB1 /* CoreVideo.framework */; };
+		A3B378ED1C8BCC2300B17AB1 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3B378EC1C8BCC2300B17AB1 /* CoreMedia.framework */; };
+		A3B378EF1C8BCC2B00B17AB1 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3B378EE1C8BCC2B00B17AB1 /* AVFoundation.framework */; };
+		A3B378F11C8BCC3100B17AB1 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3B378F01C8BCC3100B17AB1 /* ImageIO.framework */; };
+		A3B378F41C8BCFA400B17AB1 /* DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B378F31C8BCFA400B17AB1 /* DummyData.swift */; };
+		A3B378F81C8BDD4600B17AB1 /* AddAedLocateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B378F71C8BDD4600B17AB1 /* AddAedLocateVC.swift */; };
+		A3B378FA1C8BDD8E00B17AB1 /* AddAedPhotoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B378F91C8BDD8E00B17AB1 /* AddAedPhotoVC.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		A3B378CD1C8BC2D300B17AB1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A3B378C31C8BC2D300B17AB1 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS";
+		};
+		A3B378CF1C8BC2D300B17AB1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A3B378C31C8BC2D300B17AB1 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS Tests";
+		};
+		A3B378D11C8BC2D300B17AB1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A3B378C31C8BC2D300B17AB1 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4DD67C0B1A5C55C900ED2280;
+			remoteInfo = "Alamofire OSX";
+		};
+		A3B378D31C8BC2D300B17AB1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A3B378C31C8BC2D300B17AB1 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F829C6B21A7A94F100A2CD59;
+			remoteInfo = "Alamofire OSX Tests";
+		};
+		A3B378D51C8BC2D300B17AB1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A3B378C31C8BC2D300B17AB1 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4CF626EF1BA7CB3E0011A099;
+			remoteInfo = "Alamofire tvOS";
+		};
+		A3B378D71C8BC2D300B17AB1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A3B378C31C8BC2D300B17AB1 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4CF626F81BA7CB3E0011A099;
+			remoteInfo = "Alamofire tvOS Tests";
+		};
+		A3B378D91C8BC2D300B17AB1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A3B378C31C8BC2D300B17AB1 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E4202FE01B667AA100C997FB;
+			remoteInfo = "Alamofire watchOS";
+		};
+		A3B378DD1C8BC30600B17AB1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A3B378C31C8BC2D300B17AB1 /* Alamofire.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A3B378DF1C8BC30600B17AB1 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A3B378DC1C8BC30600B17AB1 /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		A32FD8841C8C453000C6F73A /* NearestAedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearestAedVC.swift; sourceTree = "<group>"; };
+		A32FD88B1C8C4C9C00C6F73A /* DisplayAedsTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayAedsTabBarController.swift; sourceTree = "<group>"; };
+		A32FD88D1C8C4E7600C6F73A /* AddAed.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddAed.storyboard; sourceTree = "<group>"; };
 		A3B378AE1C8BC14900B17AB1 /* AED Locator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AED Locator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3B378B11C8BC14900B17AB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A3B378B31C8BC14900B17AB1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A3B378B31C8BC14900B17AB1 /* HomeScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenVC.swift; sourceTree = "<group>"; };
 		A3B378B61C8BC14900B17AB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A3B378B81C8BC14900B17AB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A3B378BB1C8BC14900B17AB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A3B378BD1C8BC14900B17AB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A3B378C31C8BC2D300B17AB1 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
+		A3B378E21C8BC44A00B17AB1 /* Types.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
+		A3B378E41C8BC50C00B17AB1 /* AedApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AedApi.swift; sourceTree = "<group>"; };
+		A3B378E61C8BC5B300B17AB1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		A3B378E81C8BCB1000B17AB1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		A3B378EA1C8BCC1A00B17AB1 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		A3B378EC1C8BCC2300B17AB1 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		A3B378EE1C8BCC2B00B17AB1 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		A3B378F01C8BCC3100B17AB1 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		A3B378F31C8BCFA400B17AB1 /* DummyData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
+		A3B378F71C8BDD4600B17AB1 /* AddAedLocateVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAedLocateVC.swift; sourceTree = "<group>"; };
+		A3B378F91C8BDD8E00B17AB1 /* AddAedPhotoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAedPhotoVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +133,62 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3B378F11C8BCC3100B17AB1 /* ImageIO.framework in Frameworks */,
+				A3B378EF1C8BCC2B00B17AB1 /* AVFoundation.framework in Frameworks */,
+				A3B378ED1C8BCC2300B17AB1 /* CoreMedia.framework in Frameworks */,
+				A3B378EB1C8BCC1A00B17AB1 /* CoreVideo.framework in Frameworks */,
+				A3B378E91C8BCB1000B17AB1 /* MapKit.framework in Frameworks */,
+				A3B378E71C8BC5B300B17AB1 /* CoreLocation.framework in Frameworks */,
+				A3B378DB1C8BC30600B17AB1 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A32FD8861C8C4BCD00C6F73A /* AddAedVCs */ = {
+			isa = PBXGroup;
+			children = (
+				A3B378F91C8BDD8E00B17AB1 /* AddAedPhotoVC.swift */,
+				A3B378F71C8BDD4600B17AB1 /* AddAedLocateVC.swift */,
+			);
+			name = AddAedVCs;
+			sourceTree = "<group>";
+		};
+		A32FD8871C8C4C1200C6F73A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A3B378E41C8BC50C00B17AB1 /* AedApi.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		A32FD8881C8C4C2600C6F73A /* Helper Files */ = {
+			isa = PBXGroup;
+			children = (
+				A3B378B81C8BC14900B17AB1 /* Assets.xcassets */,
+				A3B378BA1C8BC14900B17AB1 /* LaunchScreen.storyboard */,
+				A3B378BD1C8BC14900B17AB1 /* Info.plist */,
+			);
+			name = "Helper Files";
+			sourceTree = "<group>";
+		};
+		A32FD8891C8C4C4C00C6F73A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A3B378E21C8BC44A00B17AB1 /* Types.swift */,
+				A3B378F31C8BCFA400B17AB1 /* DummyData.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		A3B378A51C8BC14900B17AB1 = {
 			isa = PBXGroup;
 			children = (
 				A3B378B01C8BC14900B17AB1 /* AED Locator */,
+				A3B378F21C8BCC3900B17AB1 /* Frameworks */,
 				A3B378AF1C8BC14900B17AB1 /* Products */,
+				A3B378C31C8BC2D300B17AB1 /* Alamofire.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +204,44 @@
 			isa = PBXGroup;
 			children = (
 				A3B378B11C8BC14900B17AB1 /* AppDelegate.swift */,
-				A3B378B31C8BC14900B17AB1 /* ViewController.swift */,
+				A32FD8841C8C453000C6F73A /* NearestAedVC.swift */,
+				A3B378B31C8BC14900B17AB1 /* HomeScreenVC.swift */,
+				A32FD88B1C8C4C9C00C6F73A /* DisplayAedsTabBarController.swift */,
+				A32FD8891C8C4C4C00C6F73A /* Model */,
+				A32FD8871C8C4C1200C6F73A /* Controllers */,
+				A32FD8861C8C4BCD00C6F73A /* AddAedVCs */,
 				A3B378B51C8BC14900B17AB1 /* Main.storyboard */,
-				A3B378B81C8BC14900B17AB1 /* Assets.xcassets */,
-				A3B378BA1C8BC14900B17AB1 /* LaunchScreen.storyboard */,
-				A3B378BD1C8BC14900B17AB1 /* Info.plist */,
+				A32FD88D1C8C4E7600C6F73A /* AddAed.storyboard */,
+				A32FD8881C8C4C2600C6F73A /* Helper Files */,
 			);
 			path = "AED Locator";
+			sourceTree = "<group>";
+		};
+		A3B378C41C8BC2D300B17AB1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A3B378CE1C8BC2D300B17AB1 /* Alamofire.framework */,
+				A3B378D01C8BC2D300B17AB1 /* Alamofire iOS Tests.xctest */,
+				A3B378D21C8BC2D300B17AB1 /* Alamofire.framework */,
+				A3B378D41C8BC2D300B17AB1 /* Alamofire OSX Tests.xctest */,
+				A3B378D61C8BC2D300B17AB1 /* Alamofire.framework */,
+				A3B378D81C8BC2D300B17AB1 /* Alamofire tvOS Tests.xctest */,
+				A3B378DA1C8BC2D300B17AB1 /* Alamofire.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A3B378F21C8BCC3900B17AB1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A3B378F01C8BCC3100B17AB1 /* ImageIO.framework */,
+				A3B378EE1C8BCC2B00B17AB1 /* AVFoundation.framework */,
+				A3B378EC1C8BCC2300B17AB1 /* CoreMedia.framework */,
+				A3B378EA1C8BCC1A00B17AB1 /* CoreVideo.framework */,
+				A3B378E81C8BCB1000B17AB1 /* MapKit.framework */,
+				A3B378E61C8BC5B300B17AB1 /* CoreLocation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,10 +254,12 @@
 				A3B378AA1C8BC14900B17AB1 /* Sources */,
 				A3B378AB1C8BC14900B17AB1 /* Frameworks */,
 				A3B378AC1C8BC14900B17AB1 /* Resources */,
+				A3B378DF1C8BC30600B17AB1 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A3B378DE1C8BC30600B17AB1 /* PBXTargetDependency */,
 			);
 			name = "AED Locator";
 			productName = "AED Locator";
@@ -96,6 +278,7 @@
 				TargetAttributes = {
 					A3B378AD1C8BC14900B17AB1 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 4W8J8Q87W8;
 					};
 				};
 			};
@@ -110,12 +293,70 @@
 			mainGroup = A3B378A51C8BC14900B17AB1;
 			productRefGroup = A3B378AF1C8BC14900B17AB1 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = A3B378C41C8BC2D300B17AB1 /* Products */;
+					ProjectRef = A3B378C31C8BC2D300B17AB1 /* Alamofire.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				A3B378AD1C8BC14900B17AB1 /* AED Locator */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		A3B378CE1C8BC2D300B17AB1 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = A3B378CD1C8BC2D300B17AB1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A3B378D01C8BC2D300B17AB1 /* Alamofire iOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Alamofire iOS Tests.xctest";
+			remoteRef = A3B378CF1C8BC2D300B17AB1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A3B378D21C8BC2D300B17AB1 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = A3B378D11C8BC2D300B17AB1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A3B378D41C8BC2D300B17AB1 /* Alamofire OSX Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Alamofire OSX Tests.xctest";
+			remoteRef = A3B378D31C8BC2D300B17AB1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A3B378D61C8BC2D300B17AB1 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = A3B378D51C8BC2D300B17AB1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A3B378D81C8BC2D300B17AB1 /* Alamofire tvOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Alamofire tvOS Tests.xctest";
+			remoteRef = A3B378D71C8BC2D300B17AB1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A3B378DA1C8BC2D300B17AB1 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = A3B378D91C8BC2D300B17AB1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		A3B378AC1C8BC14900B17AB1 /* Resources */ = {
@@ -125,6 +366,7 @@
 				A3B378BC1C8BC14900B17AB1 /* LaunchScreen.storyboard in Resources */,
 				A3B378B91C8BC14900B17AB1 /* Assets.xcassets in Resources */,
 				A3B378B71C8BC14900B17AB1 /* Main.storyboard in Resources */,
+				A32FD88E1C8C4E7600C6F73A /* AddAed.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,12 +377,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3B378B41C8BC14900B17AB1 /* ViewController.swift in Sources */,
+				A3B378B41C8BC14900B17AB1 /* HomeScreenVC.swift in Sources */,
 				A3B378B21C8BC14900B17AB1 /* AppDelegate.swift in Sources */,
+				A32FD8851C8C453000C6F73A /* NearestAedVC.swift in Sources */,
+				A32FD88C1C8C4C9C00C6F73A /* DisplayAedsTabBarController.swift in Sources */,
+				A3B378E31C8BC44A00B17AB1 /* Types.swift in Sources */,
+				A3B378F41C8BCFA400B17AB1 /* DummyData.swift in Sources */,
+				A3B378E51C8BC50C00B17AB1 /* AedApi.swift in Sources */,
+				A3B378F81C8BDD4600B17AB1 /* AddAedLocateVC.swift in Sources */,
+				A3B378FA1C8BDD8E00B17AB1 /* AddAedPhotoVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A3B378DE1C8BC30600B17AB1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Alamofire iOS";
+			targetProxy = A3B378DD1C8BC30600B17AB1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A3B378B51C8BC14900B17AB1 /* Main.storyboard */ = {
@@ -249,10 +506,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "AED Locator/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "local.geocode2016.AED-Locator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -260,10 +521,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "AED Locator/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "local.geocode2016.AED-Locator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -286,6 +551,7 @@
 				A3B378C21C8BC14900B17AB1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

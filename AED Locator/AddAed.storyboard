@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Item-->
+        <scene sceneID="Kal-9A-gQy">
+            <objects>
+                <navigationController storyboardIdentifier="AddAedNavController" id="i2W-9O-PmL" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="3Qe-AX-koE"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="a3D-sL-yA7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="hPN-1f-8RI" kind="relationship" relationship="rootViewController" id="bgb-bH-0x0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T5v-4k-lod" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-76" y="547"/>
+        </scene>
+        <!--Add an AED-->
+        <scene sceneID="XZC-ow-ffB">
+            <objects>
+                <viewController title="Add an AED" id="hPN-1f-8RI" customClass="AddAedLocateVC" customModule="AED_Locator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mYw-ks-Ydk"/>
+                        <viewControllerLayoutGuide type="bottom" id="auS-yb-BdF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3gv-HV-PFW">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Where are you?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XS4-x7-BOH">
+                                <rect key="frame" x="240" y="42" width="120" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="EDc-eT-6zy">
+                                <rect key="frame" x="0.0" y="138" width="600" height="462"/>
+                            </mapView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="C7g-Ix-ph0">
+                                <rect key="frame" x="0.0" y="94" width="600" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="EDc-eT-6zy" firstAttribute="centerX" secondItem="3gv-HV-PFW" secondAttribute="centerX" id="Pp0-ZQ-hQe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="C7g-Ix-ph0" secondAttribute="trailing" constant="-20" id="VBz-OK-t2d"/>
+                            <constraint firstItem="EDc-eT-6zy" firstAttribute="leading" secondItem="3gv-HV-PFW" secondAttribute="leadingMargin" constant="-20" id="ajg-Zk-iZH"/>
+                            <constraint firstItem="C7g-Ix-ph0" firstAttribute="top" secondItem="mYw-ks-Ydk" secondAttribute="bottom" id="cXL-Rp-7MN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="EDc-eT-6zy" secondAttribute="trailing" constant="-20" id="iR6-K6-BVz"/>
+                            <constraint firstItem="C7g-Ix-ph0" firstAttribute="leading" secondItem="3gv-HV-PFW" secondAttribute="leadingMargin" constant="-20" id="kF6-uQ-aZo"/>
+                            <constraint firstItem="XS4-x7-BOH" firstAttribute="centerX" secondItem="3gv-HV-PFW" secondAttribute="centerX" id="qrT-5e-BoE"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Where is the AED?" prompt="Move the map to the exact location of the AED" id="7qN-ov-TTt">
+                        <barButtonItem key="backBarButtonItem" title="Cancel" id="ggG-b7-Abc"/>
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="PQR-43-a2b">
+                            <connections>
+                                <segue destination="VwK-uN-nho" kind="show" id="rfk-EK-34s">
+                                    <nil key="action"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tfB-7H-2jR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="681" y="547"/>
+        </scene>
+        <!--Take a Photo-->
+        <scene sceneID="EZz-WN-VgO">
+            <objects>
+                <viewController id="VwK-uN-nho" customClass="AddAedPhotoVC" customModule="AED_Locator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mgA-5z-gqd"/>
+                        <viewControllerLayoutGuide type="bottom" id="jB2-Zm-upn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BQz-to-OiN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="1000"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rgf-g9-HEu">
+                                <rect key="frame" x="284" y="950" width="33" height="30"/>
+                                <state key="normal" title="Take"/>
+                                <connections>
+                                    <action selector="takePhotoTapped:" destination="VwK-uN-nho" eventType="touchUpInside" id="jhQ-D9-UQT"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dKI-B6-tzk">
+                                <rect key="frame" x="62" y="102" width="476" height="476"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="dKI-B6-tzk" secondAttribute="height" multiplier="1:1" id="vvt-HE-NHB"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="toW-Aq-hlc">
+                                <rect key="frame" x="180" y="586" width="240" height="240"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Rgf-g9-HEu" firstAttribute="centerX" secondItem="BQz-to-OiN" secondAttribute="centerX" id="4dp-Ju-VJ1"/>
+                            <constraint firstItem="toW-Aq-hlc" firstAttribute="top" secondItem="dKI-B6-tzk" secondAttribute="bottom" constant="37" id="6Wd-l0-jTf"/>
+                            <constraint firstItem="dKI-B6-tzk" firstAttribute="leading" secondItem="BQz-to-OiN" secondAttribute="leadingMargin" constant="42" id="9kB-zQ-LNk"/>
+                            <constraint firstItem="jB2-Zm-upn" firstAttribute="top" secondItem="Rgf-g9-HEu" secondAttribute="bottom" constant="20" id="EXv-Xc-Tuz"/>
+                            <constraint firstItem="dKI-B6-tzk" firstAttribute="centerX" secondItem="BQz-to-OiN" secondAttribute="centerX" id="Fwv-Zm-6gY"/>
+                            <constraint firstItem="toW-Aq-hlc" firstAttribute="centerX" secondItem="BQz-to-OiN" secondAttribute="centerX" id="Mx5-Nf-ngw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dKI-B6-tzk" secondAttribute="trailing" constant="42" id="XK0-Nc-zbc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Take a Photo" prompt="Center the AED in the white box below." id="XGf-EF-bDC">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="MjF-Y6-SLz">
+                            <connections>
+                                <segue destination="DqL-rX-Kjv" kind="show" id="rCo-rH-gIj">
+                                    <nil key="action"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="1000"/>
+                    <connections>
+                        <outlet property="cameraView" destination="dKI-B6-tzk" id="Mnk-Nk-WLR"/>
+                        <outlet property="imageView" destination="toW-Aq-hlc" id="4J4-Wv-l62"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cRF-Yr-bYC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1346" y="547"/>
+        </scene>
+        <!--Add a Description-->
+        <scene sceneID="M6b-Kw-DNZ">
+            <objects>
+                <viewController id="DqL-rX-Kjv" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Kml-ln-VsO"/>
+                        <viewControllerLayoutGuide type="bottom" id="vdq-1F-B33"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="L7O-Y5-r5f">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="1000"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vk2-nx-wsu">
+                                <rect key="frame" x="71" y="126" width="88" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Expiration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LBg-Y3-Ebc">
+                                <rect key="frame" x="87" y="352" width="76" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jkb-7i-Jfz">
+                                <rect key="frame" x="189" y="348" width="206" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bu1-AW-pjR">
+                                <rect key="frame" x="284" y="524" width="32" height="30"/>
+                                <state key="normal" title="Add!"/>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="vxg-xQ-2ou">
+                                <rect key="frame" x="189" y="126" width="332" height="205"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add a Description" prompt="The best description include the building name, floor number, and directions for finding the AED." id="fy9-Aa-t71"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XpI-AR-B8U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2011" y="547"/>
+        </scene>
+    </scenes>
+</document>

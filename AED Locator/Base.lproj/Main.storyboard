@@ -1,13 +1,107 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BN7-20-NQN">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Nearest AedVC-->
+        <scene sceneID="OQ0-wY-0Kv">
+            <objects>
+                <viewController id="BN7-20-NQN" customClass="NearestAedVC" customModule="AED_Locator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oQO-6M-Zvn"/>
+                        <viewControllerLayoutGuide type="bottom" id="ixR-T4-JSp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="exz-bf-PuZ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H2C-nD-YNH">
+                                <rect key="frame" x="185" y="543" width="230" height="37"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Find More AEDs"/>
+                                <connections>
+                                    <segue destination="OMl-Zb-qpO" kind="show" id="xhd-xz-vuC"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Closest AED is ___ Ft Away" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wsa-Rr-zmE">
+                                <rect key="frame" x="199" y="28" width="202" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eZe-st-3fD">
+                                <rect key="frame" x="256" y="75" width="88" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MJM-aP-bvK">
+                                <rect key="frame" x="135" y="212" width="330" height="176"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="MJM-aP-bvK" firstAttribute="centerY" secondItem="exz-bf-PuZ" secondAttribute="centerY" id="7wp-rc-s7V"/>
+                            <constraint firstItem="Wsa-Rr-zmE" firstAttribute="top" secondItem="oQO-6M-Zvn" secondAttribute="bottom" constant="8" id="CeU-U7-0JS"/>
+                            <constraint firstItem="H2C-nD-YNH" firstAttribute="centerX" secondItem="exz-bf-PuZ" secondAttribute="centerX" id="Hl2-im-Qw9"/>
+                            <constraint firstItem="eZe-st-3fD" firstAttribute="centerX" secondItem="exz-bf-PuZ" secondAttribute="centerX" id="ImT-h8-6Uu"/>
+                            <constraint firstItem="Wsa-Rr-zmE" firstAttribute="centerX" secondItem="exz-bf-PuZ" secondAttribute="centerX" id="X1b-dF-eiM"/>
+                            <constraint firstItem="H2C-nD-YNH" firstAttribute="centerX" secondItem="exz-bf-PuZ" secondAttribute="centerX" id="b89-VY-0Th"/>
+                            <constraint firstItem="ixR-T4-JSp" firstAttribute="top" secondItem="H2C-nD-YNH" secondAttribute="bottom" constant="20" id="doF-d8-BdF"/>
+                            <constraint firstItem="eZe-st-3fD" firstAttribute="top" secondItem="Wsa-Rr-zmE" secondAttribute="bottom" constant="26" id="gEF-6Z-4hf"/>
+                            <constraint firstItem="MJM-aP-bvK" firstAttribute="centerX" secondItem="exz-bf-PuZ" secondAttribute="centerX" id="gV7-B3-A2M"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="REt-65-Swf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1786" y="-539"/>
+        </scene>
+        <!--Display Aeds Tab Bar Controller-->
+        <scene sceneID="Iuf-iI-W5v">
+            <objects>
+                <tabBarController id="OMl-Zb-qpO" customClass="DisplayAedsTabBarController" customModule="AED_Locator" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="knX-uH-f7Q">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="MrX-Pi-xWe"/>
+                        <segue destination="k2F-o3-urt" kind="relationship" relationship="viewControllers" id="XIl-PF-HKc"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ifm-br-8jR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-970" y="-539"/>
+        </scene>
+        <!--AddAedDummyVC-->
+        <scene sceneID="hgI-TO-pI7">
+            <objects>
+                <viewController title="AddAedDummyVC" id="k2F-o3-urt" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NbI-OR-I9l"/>
+                        <viewControllerLayoutGuide type="bottom" id="HWC-FJ-72Q"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MfS-zK-HYg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Add an AED" id="boD-xb-5QF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1LM-bh-yDx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-133" y="288"/>
+        </scene>
+        <!--Map AEDs-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <viewController id="BYZ-38-t0r" customClass="HomeScreenVC" customModule="AED_Locator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +109,26 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="WFT-ut-XnZ">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="WFT-ut-XnZ" secondAttribute="bottom" id="Fba-QW-GiC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WFT-ut-XnZ" secondAttribute="trailing" constant="-20" id="c0m-4c-51H"/>
+                            <constraint firstItem="WFT-ut-XnZ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="eXP-6Q-mhP"/>
+                            <constraint firstItem="WFT-ut-XnZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="rvI-Ce-IIh"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Map AEDs" id="AA7-Fv-Y2H"/>
+                    <connections>
+                        <outlet property="mapView" destination="WFT-ut-XnZ" id="kbN-ka-cL3"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-1745" y="349"/>
         </scene>
     </scenes>
 </document>
